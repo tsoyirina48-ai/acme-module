@@ -1,16 +1,20 @@
+import header from './header.js';
+import footer from './footer.js';
+
+
 /* 
 window에 스크롤이 생기면 할일
   그 스크롤양이 0보다 크면 body에 active 추가
   0이면 active 제거
 */
 // const body = document.body;
-const header = document.querySelector("body > header");
+const headerEl = document.querySelector("body > header");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 0) {
-    header.classList.add("fixed");
+    headerEl.classList.add("fixed");
   } else {
-    header.classList.remove("fixed");
+    headerEl.classList.remove("fixed");
   }
 });
 
